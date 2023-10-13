@@ -4,7 +4,7 @@ import java.util.Stack;
 import java.util.Iterator;
 import java.util.Scanner;
 
-public class CalculatorModel {
+public class CalculatorModel implements CalculatorModelInterface {
     
     // Declare the stack as a class-level variable
     public Stack<Integer> stack = new Stack<>();

@@ -15,24 +15,33 @@ public class Main extends Application {
     private String currentInput = "";
     private double result = 0;
     private String operator = "";
+    //a JavaFX class that represents a text label or display element in the graphical user interface (GUI)
     private Label displayLabel;
 
     @Override
+    //is a top-level container or window that represents a platform-specific window for your JavaFX application   
     public void start(Stage primaryStage) {
         try {
+        	//set title of calculator        	
             primaryStage.setTitle("Calculator");
+            //grid, each button represents number and operation form 0 to 9
             GridPane grid = new GridPane();
+            //specifies that the content should be centered both horizontally and vertically within the cells of the GridPane
             grid.setAlignment(Pos.CENTER);
+            //distance between each grid
             grid.setHgap(10);
             grid.setVgap(10);
+            
             grid.setPadding(new Insets(10, 10, 10, 10));
 
             displayLabel = new Label("");
+            //set space for displaying the result
             displayLabel.setMinWidth(230);
             displayLabel.setMinHeight(35);
+            //color of border
             displayLabel.setStyle("-fx-border-color: lightgray;");
             displayLabel.setAlignment(Pos.CENTER_RIGHT);
-
+            
             grid.add(displayLabel, 0, 0, 4, 1);
 
             String[][] buttonLabels = {
