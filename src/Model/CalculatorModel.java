@@ -4,7 +4,9 @@ import java.util.Stack;
 import java.util.Iterator;
 import java.util.Scanner;
 
-public class CalculatorModel implements CalculatorModelInterface {
+import Controller.CalculatorControllerInterface;
+
+public class CalculatorModel implements CalculatorModelInterface{
     
     // Declare the stack as a class-level variable
     public Stack<Integer> stack = new Stack<>();
@@ -13,6 +15,11 @@ public class CalculatorModel implements CalculatorModelInterface {
     public void push(int input) {
     	stack.push(input);
     }
+    
+//    public void hello() {
+//    	System.out.printf("Hello World !"); 
+//    }
+    
     //function to pop
     public int pop() {
     	return stack.pop();
@@ -36,7 +43,7 @@ public class CalculatorModel implements CalculatorModelInterface {
     
     
     public int Calculate(String input1) {
-        
+  
 
         if (input1.equals("+") || input1.equals("-") || input1.equals("*") || input1.equals("/")) {
             if (stack.size() < 2) {
@@ -71,10 +78,13 @@ public class CalculatorModel implements CalculatorModelInterface {
 
     public static void main(String[] args) {
     	CalculatorModel var1 = new CalculatorModel();
+    	
+    	
 
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
+
             System.out.print("Input number or operator (+, -, *, /), \ntype 'q' to quit, \n'k' to clear accumulator, \n's' to swap the order of data on stack, \n'c' to print the elements on stack: ");
             String input = scanner.nextLine();
 
