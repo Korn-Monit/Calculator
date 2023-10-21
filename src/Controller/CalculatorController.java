@@ -1,8 +1,7 @@
 package Controller;
 import Controller.CalculatorControllerInterface;
+import Model.CalculatorModelInterface;
 
-public class CalculatorController implements CalculatorControllerInterface {
-	public void add() {
-		System.out.printf("Hello World !"); 
-	}
+public class CalculatorController implements CalculatorControllerInterface, CalculatorModelInterface{
+
 }
